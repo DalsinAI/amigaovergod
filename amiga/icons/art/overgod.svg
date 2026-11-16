@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Overgod for GFOS: a small ship firing into a ring of glowing shapes.
+       Copyright (c) 2026 AmiCradle Team. GPL-2 or later, as Overgod. -->
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="60%">
+      <stop offset="0" stop-color="#3a2a6e"/>
+      <stop offset="1" stop-color="#0c0a22"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff6c0"/>
+      <stop offset="0.5" stop-color="#ffb02e"/>
+      <stop offset="1" stop-color="#ff5a1f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ship" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d8f4ff"/>
+      <stop offset="1" stop-color="#3f8fd0"/>
+    </linearGradient>
+  </defs>
+  <rect x="6" y="6" width="116" height="116" rx="14" fill="url(#bg)" stroke="#000" stroke-width="3"/>
+  <g fill="none" stroke-width="5" stroke-linejoin="round">
+    <polygon points="30,30 42,24 46,38 34,42" stroke="#e04aa0" fill="#7a1f58"/>
+    <polygon points="86,22 100,30 92,42" stroke="#46d48c" fill="#145c3a"/>
+    <rect x="88" y="62" width="16" height="16" transform="rotate(20 96 70)" stroke="#e8d248" fill="#6a5a12"/>
+    <circle cx="26" cy="74" r="9" stroke="#56b8ff" fill="#123c68"/>
+  </g>
+  <circle cx="64" cy="46" r="20" fill="url(#glow)"/>
+  <g stroke="#fff6c0" stroke-width="4" stroke-linecap="round">
+    <line x1="64" y1="90" x2="64" y2="66"/>
+    <line x1="56" y1="92" x2="44" y2="68"/>
+    <line x1="72" y1="92" x2="84" y2="68"/>
+  </g>
+  <polygon points="64,86 78,112 64,104 50,112" fill="url(#ship)" stroke="#000" stroke-width="3" stroke-linejoin="round"/>
+</svg>

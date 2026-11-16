@@ -448,7 +448,7 @@ void load_new_sample_in(int samp, const char *sfile)
 
  char sfile_name [50];
 
- strcpy(sfile_name, ".//wavs//");
+ strcpy(sfile_name, "wavs/");
  strcat(sfile_name, sfile);
  strcat(sfile_name, ".wav");
 
@@ -467,7 +467,7 @@ void load_new_sample_in(int samp, const char *sfile)
 
  char sfile_name [50];
 
- strcpy(sfile_name, ".//sound//");
+ strcpy(sfile_name, "sound/");
  strcat(sfile_name, sfile);
  strcat(sfile_name, ".wav");
 
@@ -1547,7 +1547,7 @@ void load_beat_sample_in(int samp, const char *sfile)
 
  char sfile_name [50];
 
- strcpy(sfile_name, ".//wavs//beat//");
+ strcpy(sfile_name, "wavs/beat/");
  strcat(sfile_name, sfile);
  strcat(sfile_name, ".wav");
 

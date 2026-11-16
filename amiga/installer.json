@@ -1,0 +1,16 @@
+{
+  "name": "Overgod",
+  "version": "1.0-gfos1",
+  "drawer": "Overgod",
+  "program": "Overgod",
+  "cpu": "68040",
+  "fpu": false,
+  "space": 4500000,
+  "modules": [],
+  "keep": [
+    "overgod.cfg"
+  ],
+  "parent": "Work:Games",
+  "badge": "icons/art/overgod.png",
+  "script": "Install-Overgod"
+}

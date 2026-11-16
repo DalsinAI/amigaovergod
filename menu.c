@@ -414,7 +414,7 @@ void init_menus_once_only(void)
 
  destroy_bitmap(temp_bmp);
 */
- BITMAP *temp_bmp = load_bitmap("gfx//gb_title.bmp", temp_palette);
+ BITMAP *temp_bmp = load_bitmap("gfx/gb_title.bmp", temp_palette);
 
  if (!temp_bmp)
  {
@@ -464,7 +464,7 @@ void init_menus_once_only(void)
  destroy_bitmap(temp_bmp);*/
  
 /*
- temp_bmp = load_bitmap("gfx//title_s.bmp", temp_palette);
+ temp_bmp = load_bitmap("gfx/title_s.bmp", temp_palette);
 
  if (!temp_bmp)
  {
@@ -484,7 +484,7 @@ void init_menus_once_only(void)
 
  destroy_bitmap(temp_bmp);
 */
-/* upgrade_box1 = load_bitmap("gfx//upg_box.bmp", temp_palette);
+/* upgrade_box1 = load_bitmap("gfx/upg_box.bmp", temp_palette);
 
  if (!upgrade_box1)
  {
@@ -493,7 +493,7 @@ void init_menus_once_only(void)
       exit(1);
  }
 
- upgrade_box2 = load_bitmap("gfx//upg_box2.bmp", temp_palette);
+ upgrade_box2 = load_bitmap("gfx/upg_box2.bmp", temp_palette);
 
  if (!upgrade_box2)
  {
@@ -502,7 +502,7 @@ void init_menus_once_only(void)
       exit(1);
  }
 
- upgrade_box3 = load_bitmap("gfx//upg_box3.bmp", temp_palette);
+ upgrade_box3 = load_bitmap("gfx/upg_box3.bmp", temp_palette);
 
  if (!upgrade_box3)
  {
