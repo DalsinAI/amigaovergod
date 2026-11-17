@@ -805,7 +805,7 @@ void enemy_explodes(int e, int bang)
      && enemy[e].ta_time_left == TA_TURRET_TIMEOUT)
       bang = 0;
 
- int passing_colours [5];
+ int passing_colours [5] = {0};
  int bullet_colours [4];
 // int special [10];
 
@@ -2276,7 +2276,7 @@ int move_drifter_ai(int e)
 //     drag_enemy(e, .01);
      if (enemy[e].attribute [0] % 2 == 0)
      {
-       int passing_colours [5];
+       int passing_colours [5] = {0};
        int cangle = grand(ANGLE_FULL);
        int cx = enemy[e].x + xpart(cangle, grand(enemy[e].attribute [1]));
        int cy = enemy[e].y + ypart(cangle, grand(enemy[e].attribute [1]));
@@ -3535,7 +3535,7 @@ void run_boss3_1(int e)
  create_enemy(ENEMY_MESSENGER, 0, enemy[e].x, enemy[e].y,
   enemy[e].x_speed, enemy[e].y_speed, grand(ANGLE_FULL), 0, special, TARGET_NO);
 
- int passing_colours [5];
+ int passing_colours [5] = {0};
 
      passing_colours[0] = TRANS_DBLUE;
      passing_colours[1] = TRANS_PURPLE;
@@ -3739,7 +3739,7 @@ void standard_attack(int e, int angle)
  int mass;
  int status;
  int displaced = 0;
- int colours [4] = {GC_GREEN8, GC_GREEN6, GC_GREEN4, GC_GREEN2};
+ int colours [5] = {GC_GREEN8, GC_GREEN6, GC_GREEN4, GC_GREEN2, GC_GREEN1};
  int colours_for_cloud [5] = {GC_GREEN8, GC_GREEN6, GC_GREEN4, GC_GREEN2, GC_GREEN1};
  int firing_distance = 0;
  int btype;
