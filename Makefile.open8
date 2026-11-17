@@ -5,7 +5,7 @@
 # Deliberately uses the native Amiga 68k compiler and library, not
 # Allegro 4-to-5, host SDL or a host Linux compiler.
 
-CC ?= m68k-amigaos-gcc
+CC = m68k-amigaos-gcc
 ALLEGRO4_SDK ?=
 BUILD_DIR ?= build/open8
 TARGET := $(BUILD_DIR)/Overgod
