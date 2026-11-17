@@ -172,7 +172,7 @@ void run_clouds(void)
 void manage_cloud(int c)
 {
 
- int passing_colours [5];
+ int passing_colours [5] = {0};
 
 //   int x_gain = 0;
 //   int y_gain = 0;
@@ -369,7 +369,7 @@ void drag_cloud(int i, float dragged)
 void simple_cloud(int colour, int x, int y, int xs, int ys, int size)
 {
 
-   int passing_colours [5];
+   int passing_colours [5] = {0};
 
    passing_colours [0] = colour;
    
@@ -387,7 +387,7 @@ void simple_cloud(int colour, int x, int y, int xs, int ys, int size)
 void simple_cloud_trans(int colour, int x, int y, int xs, int ys, int size)
 {
 
-   int passing_colours [5];
+   int passing_colours [5] = {0};
 
    passing_colours [0] = colour;
    
@@ -405,7 +405,7 @@ void simple_cloud_trans(int colour, int x, int y, int xs, int ys, int size)
 void simple_light(int x, int y, int xs, int ys, int size)
 {
 
-   int passing_colours [5];
+   int passing_colours [5] = {0};
 
    create_cloud(CLOUD_LIGHT,
     x,
@@ -420,7 +420,7 @@ void simple_light(int x, int y, int xs, int ys, int size)
 void simple_shockwave(int colour, int x, int y, int xs, int ys, int size, int speed)
 {
 
-  int passing_colours [5];
+  int passing_colours [5] = {0};
 
   switch(colour)
   {
@@ -465,7 +465,7 @@ void simple_shockwave(int colour, int x, int y, int xs, int ys, int size, int sp
 void place_bang(int x, int y, int xs, int ys, int size, int btype)
 {
 
-   int passing_colours [5];
+   int passing_colours [5] = {0};
 
    create_cloud(CLOUD_BANG,
     x,
@@ -480,7 +480,7 @@ void place_bang(int x, int y, int xs, int ys, int size, int btype)
 void place_explosion(int x, int y, int xs, int ys, int size, int colours [5])
 {
 
-   int passing_colours [5];
+   int passing_colours [5] = {0};
 
 
    passing_colours [0] = colours [0];
@@ -528,7 +528,7 @@ void place_explosion(int x, int y, int xs, int ys, int size, int colours [5])
 void place_explosion_no_light(int x, int y, int xs, int ys, int size, int colours [5])
 {
 
-   int passing_colours [5];
+   int passing_colours [5] = {0};
 
 
    passing_colours [0] = colours [0];
@@ -567,7 +567,7 @@ void place_explosion_no_light(int x, int y, int xs, int ys, int size, int colour
 void place_small_explosion(int x, int y, int xs, int ys, int size, int colours [5])
 {
 
-   int passing_colours [5];
+   int passing_colours [5] = {0};
 
 
    passing_colours [0] = colours [0];
@@ -616,7 +616,7 @@ void place_small_explosion(int x, int y, int xs, int ys, int size, int colours [
 void place_explosion_with_smoke(int x, int y, int xs, int ys, int size, int colours [5])
 {
 
-   int passing_colours [5];
+   int passing_colours [5] = {0};
 
    passing_colours [0] = TRANS_LGREY;
 
@@ -672,7 +672,7 @@ void place_explosion_with_smoke(int x, int y, int xs, int ys, int size, int colo
 void place_rocket_trail(int x, int y, int xs, int ys, int size, int colours [5])
 {
 
-   int passing_colours [5];
+   int passing_colours [5] = {0};
 
 
    passing_colours [0] = colours [0];
