@@ -7205,7 +7205,7 @@ void zap_attack(int e)
  int xs = enemy[e].attribute [8], ys = enemy[e].attribute [9];
  int i,j, xa, ya;
  
- int passing_colours [3] = {TRANS_ORANGE, TRANS_YELLOW, TRANS_WHITE};
+ int passing_colours [5] = {TRANS_ORANGE, TRANS_YELLOW, TRANS_WHITE, TRANS_WHITE, TRANS_WHITE};
  
  place_explosion(xs, ys, 0, 0, 400 + grand(300), passing_colours);
  blast(xs, ys, 50000, 400, 6000, OWNER_ENEMY);
@@ -7222,7 +7222,7 @@ void zap_attack(int e)
       6, 4, 1500, 1500, 7, passing_colours);
 
  int zigs = hypot(xs - enemy[e].x, ys - enemy[e].y) / 10000;
- int passing_colours2 [4] = {TRANS_DRED, TRANS_DRED, TRANS_LRED, TRANS_WHITE};
+ int passing_colours2 [5] = {TRANS_DRED, TRANS_DRED, TRANS_LRED, TRANS_WHITE, TRANS_WHITE};
  int angle;
  int xprog, yprog, xb, yb, xc, yc;
  
