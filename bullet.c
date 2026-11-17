@@ -3413,7 +3413,7 @@ void bullet_impact(int b, int k, int hit_what)
 //   passing_colours [1] = TRANS_DRED;
 //   passing_colours [2] = TRANS_DRED;
    xs = bullet[b].special5 / 3; // cannot == 0!!
-   int pc2 [4];
+   int pc2 [5] = {0};
    for (j = 0; j < xs; j ++)
    {
     pc2 [0] = passing_colours [2];
