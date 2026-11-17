@@ -1,0 +1,37 @@
+# Native AmigaOS 3.x Open8 build of Overgod 1.0.
+# Allegro 4 headers/library come from the Open8 native Allegro4 RC SDK.
+# Example: make -f Makefile.open8 ALLEGRO4_SDK=/path/to/allegro4-1.1-rc1
+#
+# Deliberately uses the native Amiga 68k compiler and library, not
+# Allegro 4-to-5, host SDL or a host Linux compiler.
+
+CC ?= m68k-amigaos-gcc
+ALLEGRO4_SDK ?=
+BUILD_DIR ?= build/open8
+TARGET := $(BUILD_DIR)/Overgod
+
+ifeq ($(strip $(ALLEGRO4_SDK)),)
+$(error Set ALLEGRO4_SDK to the extracted native Allegro 4 SDK root)
+endif
+
+CFLAGS ?= -O2
+AMIGA_CFLAGS := $(CFLAGS) -std=gnu89 -I$(ALLEGRO4_SDK)/include
+AMIGA_LIBS := -L$(ALLEGRO4_SDK)/lib -lalleg -lm -lsocket
+
+SOURCES := $(wildcard *.c)
+OBJECTS := $(patsubst %.c,$(BUILD_DIR)/%.o,$(SOURCES))
+
+.PHONY: all clean
+all: $(TARGET)
+
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
+
+$(BUILD_DIR)/%.o: %.c | $(BUILD_DIR)
+	$(CC) $(AMIGA_CFLAGS) -c $< -o $@
+
+$(TARGET): $(OBJECTS)
+	$(CC) $(OBJECTS) $(AMIGA_LIBS) -o $@
+
+clean:
+	rm -rf $(BUILD_DIR)
