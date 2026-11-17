@@ -143,7 +143,7 @@ void init_display(void)
  RGB temp_palette [256];
  RGB temp_palette3 [1024];
 
- DATAFILE *datf = load_datafile("gfx//data.dat");
+ DATAFILE *datf = load_datafile("gfx/data.dat");
  if (datf == NULL)
  {
   set_gfx_mode(GFX_TEXT, 0, 0, 0, 0);
@@ -166,7 +166,7 @@ progress_update("Data.dat");
 
 //rest(1000);
 
- BITMAP *temp_bitmap = load_bitmap("gfx//gb_si.bmp", temp_palette);
+ BITMAP *temp_bitmap = load_bitmap("gfx/gb_si.bmp", temp_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("temp_bitmap (ships)");
@@ -321,8 +321,8 @@ progress_update("Data.dat");
 #ifdef FIX_FONT
 
  RGB font_palette [256];
-// BITMAP *fbmp = load_bitmap("gfx//font_cel.bmp", font_palette);
- BITMAP *fbmp = load_bitmap("gfx//font_oc.bmp", font_palette);
+// BITMAP *fbmp = load_bitmap("gfx/font_cel.bmp", font_palette);
+ BITMAP *fbmp = load_bitmap("gfx/font_oc.bmp", font_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("temp_bitmap (font_cel)");
@@ -395,7 +395,7 @@ progress_update("Data.dat");
 #ifdef GENERATE_SHIPS
 
 
- temp_bitmap = load_bitmap("gfx//gb_ship.bmp", temp_palette);
+ temp_bitmap = load_bitmap("gfx/gb_ship.bmp", temp_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("gb_ship");
@@ -472,7 +472,7 @@ progress_update("More Vehicles");
 
 // Load in enemy bitmaps:
 
- temp_bitmap = load_bitmap("gfx//gb_nme1.bmp", temp_palette);
+ temp_bitmap = load_bitmap("gfx/gb_nme1.bmp", temp_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("temp_bitmap (gb_nme1.bmp not loaded correctly?)");
@@ -496,7 +496,7 @@ progress_update("More Vehicles");
  progress_update("Enemies 1");
 
 
- temp_bitmap = load_bitmap("gfx//gb_nme2.bmp", temp_palette);
+ temp_bitmap = load_bitmap("gfx/gb_nme2.bmp", temp_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("temp_bitmap (gb_nme2.bmp not loaded correctly?)");
@@ -519,7 +519,7 @@ progress_update("More Vehicles");
 //extern BITMAP *enemy_bmps [ENEMY_BMPS];
 
 
- temp_bitmap = load_bitmap("gfx//gb_nmebm.bmp", temp_palette);
+ temp_bitmap = load_bitmap("gfx/gb_nmebm.bmp", temp_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("temp_bitmap (gb_nmebm.bmp not loaded correctly?)");
@@ -533,7 +533,7 @@ progress_update("More Vehicles");
 
  progress_update("Enemies 3");
 
- temp_bitmap = load_bitmap("gfx//gb_big1.bmp", temp_palette);
+ temp_bitmap = load_bitmap("gfx/gb_big1.bmp", temp_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("temp_bitmap (gb_big1.bmp not loaded correctly?)");
@@ -548,7 +548,7 @@ progress_update("More Vehicles");
 
  progress_update("Enemies 4");
 
- temp_bitmap = load_bitmap("gfx//gb_big2.bmp", temp_palette);
+ temp_bitmap = load_bitmap("gfx/gb_big2.bmp", temp_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("temp_bitmap (gb_big2.bmp not loaded correctly?)");
@@ -564,7 +564,7 @@ progress_update("More Vehicles");
 
  progress_update("Enemies 5");
 
- temp_bitmap = load_bitmap("gfx//gb_big3.bmp", temp_palette);
+ temp_bitmap = load_bitmap("gfx/gb_big3.bmp", temp_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("temp_bitmap (gb_big3.bmp not loaded correctly?)");
@@ -580,7 +580,7 @@ progress_update("More Vehicles");
  progress_update("Enemies 6");
 
 
- temp_bitmap = load_bitmap("gfx//gb_med1.bmp", temp_palette);
+ temp_bitmap = load_bitmap("gfx/gb_med1.bmp", temp_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("temp_bitmap (gb_med1.bmp not loaded correctly?)");
@@ -597,7 +597,7 @@ progress_update("More Vehicles");
 
  progress_update("Enemies 7");
 
-/* temp_bitmap = load_bitmap("gfx//enemy3.bmp", temp_palette);
+/* temp_bitmap = load_bitmap("gfx/enemy3.bmp", temp_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("temp_bitmap (enemy3.bmp not loaded correctly?)");
@@ -621,7 +621,7 @@ progress_update("More Vehicles");
 
 /* progress_update("Enemy3 Loaded");
 
- temp_bitmap = load_bitmap("gfx//small1.bmp", temp_palette);
+ temp_bitmap = load_bitmap("gfx/small1.bmp", temp_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("temp_bitmap (small1.bmp not loaded correctly?)");
@@ -635,7 +635,7 @@ progress_update("More Vehicles");
  
  progress_update("Small1 Loaded");
 */
- temp_bitmap = load_bitmap("gfx//gb_small.bmp", temp_palette);
+ temp_bitmap = load_bitmap("gfx/gb_small.bmp", temp_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("temp_bitmap (gm_small.bmp not loaded correctly?)");
@@ -682,7 +682,7 @@ progress_update("More Vehicles");
 
  progress_update("Small Things");
 
- temp_bitmap = load_bitmap("gfx//gb_small2.bmp", temp_palette);
+ temp_bitmap = load_bitmap("gfx/gb_small2.bmp", temp_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("temp_bitmap (gm_small2.bmp not loaded correctly?)");
@@ -733,7 +733,7 @@ progress_update("More Vehicles");
 
 
 /*
- temp_bitmap = load_bitmap("gfx//small2.bmp", temp_palette);
+ temp_bitmap = load_bitmap("gfx/small2.bmp", temp_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("temp_bitmap (small2.bmp not loaded correctly?)");
@@ -748,7 +748,7 @@ progress_update("More Vehicles");
 
  progress_update("Small3 Loaded");
 
- temp_bitmap = load_bitmap("gfx//enemy2.bmp", temp_palette);
+ temp_bitmap = load_bitmap("gfx/enemy2.bmp", temp_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("temp_bitmap (enemy2.bmp not loaded correctly?)");
@@ -763,7 +763,7 @@ progress_update("More Vehicles");
  
  progress_update("Enemy2 Loaded");
 */
- temp_bitmap = load_bitmap("gfx//gb_lsh.bmp", temp_palette);
+ temp_bitmap = load_bitmap("gfx/gb_lsh.bmp", temp_palette);
  if (temp_bitmap == NULL)
  {
   bitmap_error("temp_bitmap (gb_lsh.bmp not loaded correctly?)");
@@ -1138,7 +1138,7 @@ void make_bmp_tiles(void)
  RGB temp_palette [256];
 // RGB temp_palette3 [1024];
  
- BITMAP *temp_bitmap = load_bitmap("gfx//gb_tiles.bmp", temp_palette);
+ BITMAP *temp_bitmap = load_bitmap("gfx/gb_tiles.bmp", temp_palette);
 
  if (temp_bitmap == NULL)
  {
@@ -1164,7 +1164,7 @@ void make_bmp_tiles(void)
 
  destroy_bitmap(temp_bitmap);
 
- temp_bitmap = load_bitmap("gfx//gb_maze.bmp", temp_palette);
+ temp_bitmap = load_bitmap("gfx/gb_maze.bmp", temp_palette);
 
  if (temp_bitmap == NULL)
  {
