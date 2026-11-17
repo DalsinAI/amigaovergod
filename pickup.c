@@ -142,7 +142,7 @@ void manage_pickup(int p)
       pickup[p].type = pickup[p].subtype;
       pickup[p].subtype = grand(4);
       pickup[p].timeout = SYMBOL_TIMEOUT;   
-      int passing_colours [4] = {TRANS_DRED, TRANS_ORANGE, TRANS_YELLOW, TRANS_WHITE};
+      int passing_colours [5] = {TRANS_DRED, TRANS_ORANGE, TRANS_YELLOW, TRANS_WHITE, TRANS_WHITE};
       create_cloud(CLOUD_SHOCKWAVE,
        pickup[p].x,
        pickup[p].y,
